@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>إطفاء الأجهزة</title>
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f8f4;
+}
+header{
+    background:#e8f5e9;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    animation: slideDown 1.2s ease forwards;
+}
+header img{
+    height:50px;
+    margin-right:20px;
+    animation: bounceLogo 3s infinite; 
+}
+header h1{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:22px;
+    color:#2e7d32;
+    animation: fadeIn 2s ease forwards;
+}
+nav{
+    position:absolute;
+    left:40px;
+}
+nav a{
+    text-decoration:none;
+    color:#2e7d32;
+    margin:0 12px;
+    font-weight:bold;
+    transition: color 0.3s ease;
+}
+nav a:hover{ color:#1b5e20; }
+nav a.active{ color:#1b5e20; border-bottom:2px solid #1b5e20; }
+.banner{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+.banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transform:none;
+}
+.overlay{
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.55);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:40px;
+    animation: floatText 6s ease-in-out infinite;
+}
+.overlay h2{
+    font-size:32px;
+    margin-bottom:20px;
+    color:#ffeb3b;
+    font-weight:bold;
+}
+.overlay p{
+    max-width:70%;
+    line-height:1.7;
+    font-size:19px;
+    margin-bottom:15px; 
+    font-weight:bold;   
+    color:#f1f1f1;
+}
+.summary-box{
+    background:linear-gradient(135deg, #43a047, #1b5e20);
+    border-radius:15px;
+    padding:25px;
+    margin-top:25px;
+    max-width:65%;
+    text-align:right;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+    animation: fadeUp 1.5s ease forwards;
+}
+.summary-box h3{
+    color:#ffeb3b;
+    margin-bottom:15px;
+    text-align:center;
+    font-size:24px;
+    letter-spacing:1px;
+}
+.summary-box ul{ list-style:none; padding:0; margin:0; }
+.summary-box li{
+    position:relative;
+    padding-right:40px;
+    margin-bottom:12px;
+    font-size:18px;
+    color:#fff;
+    font-weight:bold;
+}
+.summary-box li::before{
+    content:"✔";
+    position:absolute;
+    right:0; top:0;
+    font-size:20px;
+    color:#ffeb3b;
+}
+.back-btn{
+    background:#ffeb3b;
+    color:#2e7d32;
+    padding:12px 26px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+    margin-top:30px;
+    display:inline-block;
+    box-shadow:0 0 20px rgba(255,235,59,0.7); 
+    animation: glowBtn 2s ease-in-out infinite;
+}
+.back-btn:hover{
+    background:#fdd835;
+    transform:scale(1.1);
+}
+@keyframes fadeUp { from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);} }
+@keyframes bounceLogo {0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);} }
+@keyframes fadeIn {from {opacity:0;} to {opacity:1;} }
+@keyframes slideDown {from {transform:translateY(-50px); opacity:0;} to {transform:translateY(0); opacity:1;} }
+@keyframes glowBtn {
+    0% {box-shadow:0 0 10px rgba(255,235,59,0.5);}
+    50% {box-shadow:0 0 25px rgba(255,235,59,1);}
+    100% {box-shadow:0 0 10px rgba(255,235,59,0.5);}
+}
+@keyframes floatText {
+    0%,100% {transform:translateY(0);}
+    50% {transform:translateY(-15px);}
+}
+</style>
+</head>
+<body>
+<header>
+    <img src="./image/logo.png" alt="شعار الموقع">
+    <h1>موقع ترشيد الطاقة</h1>
+    <nav>
+        <a href="index2.html">الرئيسية</a>
+        <a href="about2.html">فيديو</a>
+        <a href="tips2.html" class="active">نصائح</a>
+        <a href="poster2.html">بوستر</a>
+        <a href="quiz2.html">تفاعل</a>
+        <a href="contact2.html">تواصل</a>
+    </nav>
+</header>
+<div class="banner">
+    <img src="https://www.iasexam.com/wp-content/uploads/c-1-140-780x470.jpg" alt="إطفاء الأجهزة">
+    <div class="overlay">
+        <h2>إطفاء الأجهزة</h2>
+        <p>يُعد إطفاء الأجهزة الكهربائية عند عدم استخدامها من أهم الطرق لتقليل استهلاك الطاقة في المنازل والمؤسسات.</p>
+        <p>كما أن ترك الأجهزة في وضع الاستعداد (Standby) يساهم في هدر كمية كبيرة من الطاقة على المدى الطويل.</p>
+        <p>إن الالتزام بإطفاء الأجهزة يساعد في المحافظة على الموارد الطبيعية وتقليل الانبعاثات الضارة بالبيئة.</p>
+        <div class="summary-box">
+            <h3>الخلاصة</h3>
+            <ul>
+                <li>فصل الأجهزة عند عدم الحاجة</li>
+                <li>تجنب وضع الاستعداد (Standby)</li>
+                <li>يساعد في حماية البيئة وتوفير المال</li>
+            </ul>
+        </div>
+        <a href="tips2.html" class="back-btn">العودة للنصائح</a>
+    </div>
+</div>
+</body>
+</html>

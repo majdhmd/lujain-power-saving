@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>بوستر توعوي</title>
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f8f4;
+    animation: pageFade 1.5s ease forwards; 
+}
+header{
+    background:#e8f5e9;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    animation: slideDown 1.2s ease forwards; 
+}
+header img{
+    height:50px;
+    margin-right:20px;
+    animation: bounceLogo 3s infinite; 
+}
+header h1{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:22px;
+    color:#2e7d32;
+    animation: fadeIn 2s ease forwards;
+}
+nav{
+    position:absolute;
+    left:40px;
+}
+nav a{
+    text-decoration:none;
+    color:#2e7d32;
+    margin:0 12px;
+    font-weight:bold;
+    transition: color 0.3s ease;
+}
+nav a:hover{ color:#1b5e20; }
+nav a.active{ color:#1b5e20; border-bottom:2px solid #1b5e20; }
+.container{
+    text-align:center;
+    padding:30px 20px;
+    animation: fadeUp 2s ease forwards; 
+}
+.container h1{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+.big-box{
+    width:70%;
+    margin:auto;
+    background:#a5d6a7;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.25);
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    animation: fadeUp 2s ease forwards;
+}
+.big-box img{
+    width:40%;
+    border-radius:15px;
+}
+.text-box{
+    width:40%;
+    background:#f9e953;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+    text-align:right;
+    color:#2e7d32;
+}
+.text-box h2{
+    text-align:center;
+    margin-bottom:10px;
+    font-size:22px;
+    color:#2e7d32;
+}
+.text-box p{
+    line-height:1.7;
+    font-size:15px;
+    margin-bottom:12px;
+}
+.back-btn a button{
+    background:#ffeb3b;
+    color:#2e7d32;
+    padding:12px 24px;
+    border:none;
+    border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.4s;
+    box-shadow:0 0 15px rgba(255,235,59,0.7); 
+    animation: glowBtn 2s ease-in-out infinite;
+}
+.back-btn a button:hover{
+    background:#fdd835;
+    transform:scale(1.1);
+}
+@keyframes glowBtn {
+    0% {box-shadow:0 0 8px rgba(255,235,59,0.5);}
+    50% {box-shadow:0 0 20px rgba(255,235,59,1);}
+    100% {box-shadow:0 0 8px rgba(255,235,59,0.5);}
+}
+@keyframes bounceLogo {
+    0%,100% {transform:translateY(0);}
+    50% {transform:translateY(-10px);}
+}
+@keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
+@keyframes fadeUp {from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);}}
+@keyframes slideDown {from {transform:translateY(-50px); opacity:0;} to {transform:translateY(0); opacity:1;}}
+@keyframes pageFade {from {opacity:0;} to {opacity:1;}}
+</style>
+</head>
+<body>
+<header>
+    <img src="./image/logo.png" alt="شعار الموقع">
+    <h1>موقع ترشيد الطاقة</h1>
+    <nav>
+        <a href="index2.html">الرئيسية</a>
+        <a href="about2.html">فيديو</a>
+        <a href="tips2.html">نصائح</a>
+        <a href="poster2.html" class="active">بوستر</a>
+        <a href="quiz2.html">تفاعل</a>
+        <a href="contact2.html">تواصل</a>
+    </nav>
+</header>
+<div class="container">
+<h1>بوستر توعوي</h1>
+<div class="big-box">
+<img src="image/Final poster.png" alt="بوستر توعوي">
+<div class="text-box">
+    <h2>نحو مستقبل أخضر</h2>
+    <p>هذا البوستر يوضح أهمية ترشيد الطاقة والانتقال إلى مصادر نظيفة مثل الطاقة الشمسية والرياح.</p>
+    <p>خطوات بسيطة مثل استخدام الإضاءة الموفرة، إطفاء الأجهزة غير المستخدمة، والاعتماد على الطاقة المتجددة.</p>
+    <p>معًا نستطيع أن نصنع مستقبلًا أفضل للأجيال القادمة ونساهم في حماية مواردنا الطبيعية.</p>
+</div>
+</div>
+<div class="back-btn">
+<a href="tips2.html">
+<button>العودة إلى النصائح</button>
+</a>
+</div>
+</div>
+</body>
+</html>

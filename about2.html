@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>فيديوهات التوعية</title>
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f8f4;
+    animation: pageFade 1.5s ease forwards;
+}
+header{
+    background:#e8f5e9;
+    padding:15px 40px;
+    display:flex;justify-content:space-between;
+    align-items:center;position:relative;
+    animation: slideDown 1.2s ease forwards;
+}
+header img{
+    height:50px;
+    margin-right:20px;
+    animation: bounceLogo 3s infinite; 
+}
+header h1{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:22px;
+    color:#2e7d32;
+    animation: fadeIn 2s ease forwards;
+}
+nav{
+    position:absolute;
+    left:40px;
+}
+nav a{
+    text-decoration:none;
+    color:#2e7d32;
+    margin:0 12px;
+    font-weight:bold;
+    transition: color 0.3s ease;
+}
+nav a:hover{
+    color:#1b5e20;
+}
+nav a.active{
+    color:#1b5e20;
+    border-bottom:2px solid #1b5e20;
+}
+.container{
+    text-align:center;
+    padding:60px 20px;
+}
+.container h2{
+    color:#2e7d32;
+    margin-bottom:30px;
+    animation: fadeUp 1.5s ease forwards;
+}
+.video-box{
+    width:75%;
+    max-width:900px;
+    margin:auto;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+    position:relative;
+    animation: zoomIn 1.5s ease forwards;
+}
+.video-box img{
+    width:100%;
+    display:block;
+    animation: fadeIn 2s ease forwards;
+}
+.play-btn{
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(0,0,0,0.6);
+    color:white;
+    font-size:60px;
+    width:90px;height:90px;
+    border-radius:50%;
+line-height:90px;
+    text-align:center;
+    animation: pulseIcon 2s infinite;
+}
+.container p{
+    width:70%;
+    margin:auto;
+    line-height:1.8;
+    margin-top:25px;
+    font-size:17px;
+    animation: fadeUp 2s ease forwards;
+}
+.show-btn{
+    margin-top:10px; 
+    background:#2e7d32; color:white;
+    border:none;
+    padding:12px 26px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:17px;
+    font-weight:bold;
+    box-shadow:0 0 20px rgba(46,125,50,0.7);
+    animation: glowBtn 2s ease-in-out infinite;
+    transition:0.3s;
+}
+.show-btn:hover{
+    background:#1b5e20;
+    transform:scale(1.1);
+}
+.extra-section{
+    margin-top:20px;
+    width:70%;
+    margin:auto;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 0 20px rgba(0,0,0,0.15);
+    display:none;
+}
+.extra-section h3{
+    color:#2e7d32;
+    margin-bottom:15px;
+    text-align:center;
+    font-size:20px;
+}
+.extra-section ul{
+    list-style:none;
+    padding-right:0;
+}
+.extra-section li{
+    position:relative;
+    padding-right:30px;
+    margin-bottom:12px;
+    font-size:17px;
+    color:#333;
+    opacity:0;
+    animation: fadeInUp 1s ease forwards;
+}
+.extra-section li:nth-child(1){ animation-delay:0.5s; }
+.extra-section li:nth-child(2){ animation-delay:1s; }
+.extra-section li:nth-child(3){ animation-delay:1.5s; }
+.extra-section li::before{
+    content:"✔";
+    position:absolute;
+    right:0;top:0;
+    color:#2e7d32;
+    font-weight:bold;
+    font-size:18px;
+    animation: pulseIcon 2s infinite;
+}
+@keyframes bounceLogo {
+    0%, 100% {transform:translateY(0);}
+    50% {transform:translateY(-10px);}
+}
+@keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
+@keyframes fadeUp {from {opacity:0; transform:translateY(30px);} to {opacity:1; transform:translateY(0);}}
+@keyframes fadeInUp {from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);}}
+@keyframes pulseIcon {0%, 100% {transform:scale(1);} 50% {transform:scale(1.2);}}
+@keyframes glowBtn {
+    0% {box-shadow:0 0 10px rgba(46,125,50,0.5);}
+    50% {box-shadow:0 0 25px rgba(46,125,50,1);}
+    100% {box-shadow:0 0 10px rgba(46,125,50,0.5);}
+}
+@keyframes pageFade {from {opacity:0;} to {opacity:1;}}
+@keyframes slideDown {from {transform:translateY(-50px); opacity:0;} to {transform:translateY(0); opacity:1;}}
+@keyframes zoomIn {from {transform:scale(0.9); opacity:0;} to {transform:scale(1); opacity:1;}}
+</style>
+</head>
+<body>
+<header>
+    <img src="./image/logo.png" alt="شعار الموقع">
+    <h1>موقع ترشيد الطاقة</h1>
+    <nav>
+        <a href="index2.html">الرئيسية</a>
+        <a href="about2.html" class="active">فيديو</a>
+        <a href="tips2.html">نصائح</a>
+        <a href="poster2.html">بوستر</a>
+        <a href="quiz2.html">تفاعل</a>
+        <a href="contact2.html">تواصل</a>
+    </nav>
+</header>
+<div class="container">
+<h2>فيديو توعوي لترشيد استهلاك الطاقة</h2>
+<a href="https://youtu.be/4b8x4rKiAhE?t=87" target="_blank">
+    <div class="video-box">
+        <img src="./image/video.jpg" alt="فيديو توعوي">
+        <div class="play-btn">▶</div>
+    </div>
+</a>
+<p>
+يهدف هذا الفيديو إلى نشر الوعي حول أهمية ترشيد استهلاك الطاقة في حياتنا اليومية،
+وتشجيع الطلبة والمجتمع على استخدام الكهرباء والمياه بطريقة مسؤولة.
+كما يوضح السلوكيات الصحيحة التي تساعد في تقليل الهدر،
+وحماية البيئة، وتوفير المال، والمساهمة في بناء مستقبل مستدام.
+</p>
+<h3 style="color:#2e7d32; margin-top:30px;">لماذا نرشّد الطاقة؟</h3>
+<button class="show-btn" onclick="document.querySelector('.extra-section').style.display='block'; this.style.display='none';">
+    إظهار الأسباب
+</button>
+<div class="extra-section">
+    <ul>
+        <li>توفير المال على المدى الطويل</li>
+        <li>حماية البيئة وتقليل التلوث</li>
+        <li>الحفاظ على الموارد الطبيعية</li>
+    </ul>
+</div>
+</div>
+</body>
+</html>

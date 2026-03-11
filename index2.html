@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>موقع ترشيد الطاقة</title>
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f8f4;
+    overflow-x:hidden;
+}
+.background-animation{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    z-index:-1;
+    overflow:hidden;
+}
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(46,125,50,0.15);
+    animation: moveCircle 20s linear infinite;
+}
+.circle.small{width:80px; height:80px;}
+.circle.medium{width:150px; height:150px;}
+.circle.large{width:250px; height:250px;}
+@keyframes moveCircle {
+    0% {transform:translateY(0) translateX(0);}
+    50% {transform:translateY(-50px) translateX(30px);}
+    100% {transform:translateY(0) translateX(0);}
+}
+header{
+    background:#e8f5e9;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+}
+header img{
+    height:50px;
+    margin-right:20px;
+    animation: bounceLogo 3s infinite;
+}
+header h1{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:22px;
+    color:#2e7d32;
+    animation: fadeIn 2s ease forwards;
+}
+nav{
+    position:absolute;
+    left:40px;
+}
+nav a{
+    text-decoration:none;
+    color:#2e7d32;
+    margin:0 12px;
+    font-weight:bold;
+    transition: color 0.3s ease;
+}
+nav a:hover{
+    color:#1b5e20;
+}
+nav a.active{
+    color:#1b5e20;
+    border-bottom:2px solid #1b5e20;
+}
+.banner{
+    position:relative;
+    width:100%;
+    height:500px;
+    overflow:hidden;
+}
+.banner img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    animation: zoomBanner 15s ease-in-out infinite alternate;
+}
+.banner-content{
+    position:absolute;top:0;left:0;
+    width:100%;height:100%;
+    text-align:center;
+    color:white;
+    background:rgba(0,0,0,0.4);
+    padding:40px;
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
+    animation: fadeUp 2s ease forwards;
+}
+.banner-content h2{
+    font-size:28px;
+    margin-bottom:15px;
+    animation: pulseText 2s infinite;
+}
+.banner-content p{
+    font-size:18px;
+    line-height:1.6;
+    max-width:80%;
+}
+.quiz{
+    margin-top:20px;
+    animation: fadeIn 3s ease forwards;
+}
+.quiz p{
+    font-size:18px;
+    margin-bottom:10px;
+    white-space:nowrap; 
+}
+.quiz button{
+    margin:5px;
+    background:#2196f3;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    transition: transform 0.3s ease;
+}
+.quiz button:hover{
+    transform: scale(1.1);
+}
+.correct{background:#4caf50 !important;}
+.wrong{background:#f44336 !important;}
+.next-btn{
+    display:block;margin:20px auto;
+    font-size:18px;padding:12px 28px;
+    background:#ffeb3b;color:#2e7d32;
+    border:none;border-radius:10px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(255,235,59,0.7);
+    animation: glowBtn 2s ease-in-out infinite;
+    transition:0.4s;
+}
+.next-btn:hover{
+    background:#fdd835;
+    transform:scale(1.1);
+}
+.counters{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    margin:40px 0;
+}
+.counter-box{
+    background:#e8f5e9;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+    text-align:center;
+    width:200px;
+    animation: fadeUp 2s ease forwards;
+}
+.counter-box h3{
+    font-size:28px;
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+.counter-box p{
+    font-size:16px;
+    color:#333;
+}
+@keyframes fadeUp {
+    from {opacity:0; transform:translateY(40px);}
+    to {opacity:1; transform:translateY(0);}
+}
+@keyframes fadeIn {from {opacity:0;} to {opacity:1;}}
+@keyframes zoomBanner {from {transform:scale(1);} to {transform:scale(1.1);}}
+@keyframes bounceLogo {0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+@keyframes pulseText {0%,100%{color:white;}50%{color:#ffeb3b;}}
+@keyframes glowBtn {
+    0% {box-shadow:0 0 10px rgba(255,235,59,0.5);}
+    50% {box-shadow:0 0 25px rgba(255,235,59,1);}
+    100% {box-shadow:0 0 10px rgba(255,235,59,0.5);}
+}
+</style>
+</head>
+<body>
+<div class="background-animation">
+    <div class="circle small" style="top:20%; left:10%;"></div>
+    <div class="circle medium" style="top:50%; left:70%;"></div>
+    <div class="circle large" style="top:80%; left:30%;"></div>
+</div>
+<header>
+    <img src="./image/logo.png" alt="شعار الموقع">
+    <h1>موقع ترشيد الطاقة</h1>
+    <nav>
+        <a href="index2.html" class="active">الرئيسية</a>
+        <a href="about2.html">فيديو</a>
+        <a href="tips2.html">نصائح</a>
+        <a href="poster2.html">بوستر</a>
+        <a href="quiz2.html">تفاعل</a>
+        <a href="contact2.html">تواصل</a>
+    </nav>
+</header>
+<div class="banner">
+    <img src="./image/banner.jpg" alt="صورة الطاقة">
+    <div class="banner-content">
+        <h2>معًا نحو ترشيد استهلاك الطاقة</h2>
+        <p>
+            يهدف هذا الموقع إلى نشر الوعي حول أهمية ترشيد استهلاك الطاقة
+            ودوره الكبير في حماية البيئة والحفاظ على الموارد الطبيعية.
+        </p>
+        <div class="quiz">
+            <p>ما هي أفضل طريقة لتوفير الطاقة في المنزل؟</p>
+            <button onclick="checkAnswer(this,true)">إطفاء الأجهزة غير المستخدمة</button>
+            <button onclick="checkAnswer(this,false)">ترك الأجهزة تعمل دائمًا</button>
+        </div>
+    </div>
+</div>
+<div class="counters">
+    <div class="counter-box">
+        <h3 id="counter1">0</h3>
+        <p>بيت استفاد من ترشيد الطاقة</p>
+    </div>
+    <div class="counter-box">
+        <h3 id="counter2">0</h3>
+        <p>طالب شارك في الحملة</p>
+    </div>
+    <div class="counter-box">
+        <h3 id="counter3">0</h3>
+        <p>طن من الانبعاثات تم تقليلها</p>
+    </div>
+</div>
+<button class="next-btn" onclick="location.href='about2.html'">الصفحة التالية</button>
+<script>
+function checkAnswer(btn, isCorrect){
+    const buttons = btn.parentNode.querySelectorAll("button");
+    buttons.forEach(b => b.classList.remove("correct","wrong"));
+    if(isCorrect){
+        btn.classList.add("correct");
+    } else {
+        btn.classList.add("wrong");
+    }
+}
+function animateCounter(id, target){
+    let count = 0;
+    const speed = Math.ceil(target/100);
+    const interval = setInterval(()=>{
+        count += speed;
+        if(count >= target){
+            count = target;
+            clearInterval(interval);
+        }
+        document.getElementById(id).innerText = count;
+    },30);
+}
+window.onload = function(){
+    animateCounter("counter1", 1000);
+    animateCounter("counter2", 5000);
+    animateCounter("counter3", 300);
+}
+</script>
+</body>
+</html>
